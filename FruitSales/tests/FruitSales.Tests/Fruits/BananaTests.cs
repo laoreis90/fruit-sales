@@ -14,7 +14,7 @@ public class BananaTests
         IPricingStrategy strategy = new PerKilogramPricingStrategy(bananaPrice);
 
         // Act
-        Banana banana = new Banana(bananaPrice, strategy);
+        Banana banana = new Banana(strategy);
 
         // Assert
         Assert.Equal("Banana", banana.Name);
@@ -26,7 +26,7 @@ public class BananaTests
         // Arrange
         Price bananaPrice = Price.Create(2.00m);
         IPricingStrategy strategy = new PerKilogramPricingStrategy(bananaPrice);
-        Banana banana = new Banana(bananaPrice, strategy);
+        Banana banana = new Banana(strategy);
         // Act
         Price calculatedPrice = banana.CalculatePrice(2m);
 

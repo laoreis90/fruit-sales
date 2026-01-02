@@ -14,7 +14,7 @@ public class AppleTests
         IPricingStrategy strategy = new PerKilogramPricingStrategy(applePrice);
 
         // Act
-        Apple apple = new Apple(applePrice, strategy);
+        Apple apple = new Apple(strategy);
 
         // Assert
         Assert.Equal("Apple", apple.Name);
@@ -26,7 +26,7 @@ public class AppleTests
         // Arrange
         Price applePrice = Price.Create(2.00m);
         IPricingStrategy strategy = new PerKilogramPricingStrategy(applePrice);
-        Apple apple = new Apple(applePrice, strategy);
+        Apple apple = new Apple(strategy);
 
         // Act
         Price calculatedPrice = apple.CalculatePrice(2m);

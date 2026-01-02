@@ -33,4 +33,9 @@ public record Price
 
         return new Price(price.Amount * multiplier);
     }
+    
+    public override string ToString()
+    {
+        return $"${Amount:F2}";
+    }
 }

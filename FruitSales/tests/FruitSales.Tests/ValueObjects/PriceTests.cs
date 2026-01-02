@@ -25,7 +25,7 @@ public class PriceTests
         const decimal amount = 0m;
 
         // Act
-        var price = Price.Create(amount);
+        Price price = Price.Create(amount);
 
         // Assert
         Assert.Equal(0m, price.Amount);
@@ -73,7 +73,7 @@ public class PriceTests
     public void Multiply_NegativeMultiplier_ThrowsArgumentException()
     {
         // Arrange
-        var price = Price.Create(2.00m);
+        Price price = Price.Create(2.00m);
         const decimal multiplier = -1m;
 
         // Act & Assert

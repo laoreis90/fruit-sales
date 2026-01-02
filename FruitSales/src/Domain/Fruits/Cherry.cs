@@ -1,12 +1,5 @@
 ﻿using FruitSales.Domain.Pricing;
-using FruitSales.Domain.ValueObjects;
 
 namespace FruitSales.Domain.Fruits;
 
-public class Cherry : Fruit
-{
-    public Cherry(Price basePrice, IPricingStrategy pricingStrategy)
-        : base("Cherry", pricingStrategy)
-    {
-    }
-}
+public class Cherry(IPricingStrategy pricingStrategy) : Fruit("Cherry", pricingStrategy);
