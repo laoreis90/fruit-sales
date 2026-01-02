@@ -6,7 +6,7 @@ namespace FruitSales.Domain.Fruits;
 public class Banana : Fruit
 {
     public Banana(Price basePrice, IPricingStrategy pricingStrategy) 
-        : base("Banana", basePrice, pricingStrategy)
+        : base("Banana", pricingStrategy)
     {
     }
 }

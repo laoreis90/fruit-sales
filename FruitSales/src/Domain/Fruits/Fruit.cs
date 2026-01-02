@@ -6,19 +6,13 @@ namespace FruitSales.Domain.Fruits;
 public abstract class Fruit
 {
     public string Name { get; }
-    public Price BasePrice { get; }
-    protected IPricingStrategy PricingStrategy { get; }
+    private IPricingStrategy PricingStrategy { get; }
 
-    protected Fruit(string name, Price basePrice, IPricingStrategy pricingStrategy)
+    protected Fruit(string name, IPricingStrategy pricingStrategy)
     {
         if (string.IsNullOrWhiteSpace(name))
         {
             throw new ArgumentException("Name cannot be null or whitespace.", nameof(name));
-        }
-
-        if (basePrice is null)
-        {
-            throw new ArgumentNullException(nameof(basePrice));
         }
 
         if (pricingStrategy is null)
@@ -27,7 +21,6 @@ public abstract class Fruit
         }
         
         Name = name;
-        BasePrice = basePrice;
         PricingStrategy = pricingStrategy;
     }
 

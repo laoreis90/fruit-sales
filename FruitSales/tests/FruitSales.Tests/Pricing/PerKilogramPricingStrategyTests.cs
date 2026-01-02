@@ -28,10 +28,10 @@ public class PerKilogramPricingStrategyTests
         IPricingStrategy strategy = new PerKilogramPricingStrategy(pricePerKilogram);
 
         // Act
-        var result = strategy.CalculatePrice(0);
+        Price calculatedPrice = strategy.CalculatePrice(0);
 
         // Assert
-        Assert.Equal(Price.Create(0m), result);
+        Assert.Equal(Price.Create(0m), calculatedPrice);
     }
     
     [Fact]
