@@ -53,5 +53,5 @@ CodeCoverage/
 TestResult.xml
 nunit-*.xml
 
-FruitSales/.idea
-FruitSales/FruitSales.sln.DotSettings.user
+.idea
+FruitSales.sln.DotSettings.user
